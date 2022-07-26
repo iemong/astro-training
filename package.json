@@ -1,0 +1,26 @@
+{
+  "name": "astro-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iemong/astro-training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iemong/astro-training/issues"
+  },
+  "homepage": "https://github.com/iemong/astro-training#readme",
+  "dependencies": {
+    "astro": "^1.0.0-rc.1"
+  }
+}
