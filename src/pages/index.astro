@@ -7,10 +7,12 @@ import Sidebar from '../components/Sidebar.tsx'
 <!-- Below is your "component template." It's just HTML, but with
      some magic sprinkled in to help you build great templates. -->
 <html>
-  <body>
-    <main>
-        <h1>Hello, World!</h1>
-        <Sidebar/>
+  <body class="h-screen">
+    <main class="h-full grid grid-cols-[280px_1fr] grid-rows-[50px_1fr_100px] gap-2">
+        <Sidebar className="row-start-2"/>
+        <header>
+          <h1>Hello, World!</h1>
+        </header>
     </main>
   </body>
 </html>

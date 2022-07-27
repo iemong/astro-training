@@ -1,8 +1,12 @@
 import * as React from 'react'
 
-const Sidebar: React.FC = () => {
+type Props = {
+  className: string
+}
+
+const Sidebar: React.FC<Props> = (props: Props) => {
     return (
-        <aside>
+        <aside className={`bg-[#ff0] ${props.className}`}>
           <p className={'font-bold'}>sidebar</p>
         </aside>
     )
