@@ -22,5 +22,10 @@
   "homepage": "https://github.com/iemong/astro-training#readme",
   "dependencies": {
     "astro": "^1.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@astrojs/react": "^0.4.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }
