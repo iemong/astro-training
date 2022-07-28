@@ -14,5 +14,8 @@
     "types": ["astro/client"],
     // Tell TypeScript where your build output is
     "outDir": "./dist"
+  },
+  "vueCompilerOptions": {
+    "experimentalDisableTemplateSupport": true
   }
 }

@@ -3,6 +3,7 @@
 // is your "component front matter". It never runs in the browser.
 console.log('This runs in your terminal, not the browser!');
 import Sidebar from '../components/Sidebar.tsx'
+import Header from '../components/Header.vue'
 ---
 <!-- Below is your "component template." It's just HTML, but with
      some magic sprinkled in to help you build great templates. -->
@@ -10,9 +11,7 @@ import Sidebar from '../components/Sidebar.tsx'
   <body class="h-screen">
     <main class="h-full grid grid-cols-[280px_1fr] grid-rows-[50px_1fr_100px] gap-2">
         <Sidebar className="row-start-2" client:load/>
-        <header>
-          <h1>Hello, World!</h1>
-        </header>
+        <Header className="col-span-2" />
     </main>
   </body>
 </html>
