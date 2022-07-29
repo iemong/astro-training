@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "wrangler pages dev ./dist"
   },
   "repository": {
     "type": "git",
@@ -24,10 +24,14 @@
     "astro": "^1.0.0-rc.1"
   },
   "devDependencies": {
+    "@astrojs/cloudflare": "^0.4.0",
     "@astrojs/react": "^0.4.2",
     "@astrojs/tailwind": "^0.2.5",
     "@astrojs/vue": "^0.5.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "vue": "^3.2.37",
+    "web-streams-polyfill": "^3.2.1",
+    "wrangler": "^2.0.23"
   }
 }

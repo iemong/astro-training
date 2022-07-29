@@ -2,6 +2,9 @@ import * as React from 'react'
 
 type Props = {
   className: string
+  title: string
+  children: JSX.Element
+  socialLinks: any[]
 }
 
 const Sidebar: React.FC<Props> = (props: Props) => {
@@ -12,8 +15,10 @@ const Sidebar: React.FC<Props> = (props: Props) => {
 
     return (
         <aside className={`bg-[#ff0] ${props.className}`}>
-          <p className={'font-bold'}>sidebar</p>
+          <header>{props.title}</header>
+          <main>{props.children}</main>
           <button onClick={() => {handleClick()}}>button</button>
+          <footer>{props.socialLinks}</footer>
         </aside>
     )
 }

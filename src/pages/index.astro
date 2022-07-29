@@ -1,7 +1,5 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component front matter". It never runs in the browser.
-console.log('This runs in your terminal, not the browser!');
+import "web-streams-polyfill/es2018"
 import Sidebar from '../components/Sidebar.tsx'
 import Header from '../components/Header.vue'
 ---
@@ -10,13 +8,15 @@ import Header from '../components/Header.vue'
 <html>
   <body class="h-screen">
     <main class="h-full grid grid-cols-[280px_1fr] grid-rows-[50px_1fr_100px] gap-2">
-        <Sidebar className="row-start-2" client:load/>
+        <Sidebar className="row-start-2" client:load>
+          <h2 slot="title">Menu</h2>
+          <p>Here is a sidebar with some text and a button.</p>
+          <ul slot="social-links">
+            <li><a href="https://twitter.com/astrodotbuild">Twitter</a></li>
+            <li><a href="https://github.com/withastro">GitHub</a></li>
+          </ul>
+        </Sidebar>
         <Header className="col-span-2" />
     </main>
   </body>
 </html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
