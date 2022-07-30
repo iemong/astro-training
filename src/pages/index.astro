@@ -2,6 +2,7 @@
 import "web-streams-polyfill/es2018"
 import Sidebar from '../components/Sidebar.tsx'
 import Header from '../components/Header.vue'
+import Content from '../components/Content.svelte'
 ---
 <!-- Below is your "component template." It's just HTML, but with
      some magic sprinkled in to help you build great templates. -->
@@ -17,6 +18,7 @@ import Header from '../components/Header.vue'
           </ul>
         </Sidebar>
         <Header className="col-span-2" />
+        <Content client:load/>
     </main>
   </body>
 </html>
