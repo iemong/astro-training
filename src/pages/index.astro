@@ -4,21 +4,24 @@ import Sidebar from '../components/Sidebar.tsx'
 import Header from '../components/Header.vue'
 import Content from '../components/Content.svelte'
 ---
+
 <!-- Below is your "component template." It's just HTML, but with
      some magic sprinkled in to help you build great templates. -->
 <html>
-  <body class="h-screen">
-    <main class="h-full grid grid-cols-[280px_1fr] grid-rows-[50px_1fr_100px] gap-2">
-        <Sidebar className="row-start-2" client:load>
-          <h2 slot="title">Menu</h2>
-          <p>Here is a sidebar with some text and a button.</p>
-          <ul slot="social-links">
-            <li><a href="https://twitter.com/astrodotbuild">Twitter</a></li>
-            <li><a href="https://github.com/withastro">GitHub</a></li>
-          </ul>
-        </Sidebar>
-        <Header className="col-span-2" />
-        <Content client:load/>
-    </main>
-  </body>
+
+<body class="h-screen">
+  <main class="h-full grid grid-cols-[280px_1fr] grid-rows-[50px_1fr_100px] gap-2">
+    <Sidebar className="row-start-2" client:load>
+      <h2 slot="title">Menu</h2>
+      <p>Here is a sidebar with some text and a button.</p>
+      <ul slot="social-links">
+        <li><a href="https://twitter.com/astrodotbuild">Twitter</a></li>
+        <li><a href="https://github.com/withastro">GitHub</a></li>
+      </ul>
+    </Sidebar>
+    <Header className="col-span-2" />
+    <Content client:only />
+  </main>
+</body>
+
 </html>

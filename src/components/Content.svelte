@@ -1,5 +1,6 @@
 <script>
     import { db } from "../db";
+    import { liveQuery } from "dexie";
 
     import dayjs from "dayjs";
     const today = dayjs();
@@ -17,6 +18,8 @@
             console.error(error);
         }
     }
+
+    let users = liveQuery(() => db.users.toArray());
 </script>
 
 <div>
@@ -32,4 +35,11 @@
     </label>
     <p>{birthday}</p>
     <p>{heavy}トン</p>
+    <ul>
+        {#if $users}
+            {#each $users as user (user.id)}
+                <li>{user.birthday}</li>
+            {/each}
+        {/if}
+    </ul>
 </div>
