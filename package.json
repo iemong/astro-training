@@ -22,7 +22,8 @@
   "homepage": "https://github.com/iemong/astro-training#readme",
   "dependencies": {
     "astro": "^1.0.0-rc.1",
-    "dexie": "^3.2.2"
+    "dexie": "^3.2.2",
+    "nanostores": "^0.6.0"
   },
   "devDependencies": {
     "@astrojs/cloudflare": "^0.4.0",
